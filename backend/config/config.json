@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Vanillefraise2",
+    "database": "database_development_p7groupomania",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "Vanillefraise2",
+    "database": "database_test_P7groupomania",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "Vanillefraise2",
+    "database": "database_production_p7groupomania",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
