@@ -1,7 +1,7 @@
 <template>
-<div id="signup-login">	
-	<Nav redirection="/login" :logged="false"/> 
-    <div id="loginForm">  
+<div id="signup-login">
+    <Nav redirection="/login" :logged="false"/>
+    <div id="loginForm">
         <h3>Login</h3>
         <form @submit.prevent="onSubmit">
             <input type="email" name="email" placeholder="Email" v-model="dataForm.email">
@@ -10,7 +10,6 @@
         </form>
         <h4>{{ errMsg }}</h4>
         <p>Je n'ai pas créé de compte ? Cliquez ici: <router-link to="/signup">Signup</router-link></p>
-
     </div>
 </div>
 </template>

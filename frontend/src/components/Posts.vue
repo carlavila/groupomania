@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import Comments from "../components/Comments.vue"
+import Comments from "./Comments.vue"
 import Likes from "../components/Likes.vue"
 import router from '../router'
 export default {

@@ -47,9 +47,12 @@ export default {
                 .catch(error => console.log(error))
             this.liked = true // <- on indiquer à notre template que le user à liker ce post
         },
-        
-	}
-	}
+        /* fonction pour unliker le post */
+    },
+    async created() {
+        this.likes = await this.fetchLikes(this.postId)
+    }
+}
 </script>
 
 <style scoped>

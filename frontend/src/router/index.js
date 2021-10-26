@@ -46,7 +46,6 @@ const routes = [
 		component: () => import('../views/Profile.vue'),
 		meta: { requiresAuth: true }
 	}
-  
 ]
 
 const router = new VueRouter({
