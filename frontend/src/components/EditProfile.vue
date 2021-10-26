@@ -3,7 +3,7 @@
         <div class="showProfile">
             <button @click.prevent="$emit('toggle-Profile')"><i class="fas fa-arrow-left"></i>retour au profil</button>    
         </div>         
-        <form @submit.prevent="editProfile">
+        <form @submit.prevent="editProfile" enctype="multipart/form-data">
 
             <label for="file" class="profileLabel">
                 <div>

@@ -15,7 +15,7 @@ exports.createPost = (req, res) => {
 	try {
 	    console.log(req.body);
 	    let { text, file, userId } = req.body;
-	    Post.create({text, file, userId})
+	    Post.create({content:text, file, userId})
 		.then(newPost => {
 		    console.log("nouveau post créé");
 		    res.status(201).json(newPost);

@@ -42,7 +42,7 @@ exports.login = (req, res) => {
 			    // la res de login renvoi des données de user et le token (qui servira pour l'authentification)
 			    userId: user.id,
 			    isAdmin: user.isAdmin, 
-			    token: jwt.sign({userId: user.id, isAdmin: user.isAdmin }, 'token_dev', { expiresIn: '24h' })
+			    token: jwt.sign({userId: user.id, isAdmin: user.isAdmin }, process.env.TOKEN_KEY, { expiresIn: '24h' })
 			});               
 		    })
 		    .catch(error => res.status(400).json(error));
@@ -53,6 +53,7 @@ exports.login = (req, res) => {
 /* logique pour update un user */
 exports.editUser = (req, res) => {  
 	req.file ? req.body.profile = req.file.filename : console.log("on garde la même photo"); // <- on vérifie si l'user a uploadé une nouvelle photo
+	console.log('photo :'+ req.file)
 	if (req.file) { // <- on supprime l'ancienne image de profil
 	    User.findOne({where: {id:req.params.id}})
 		.then(user => {

@@ -4,7 +4,7 @@ const { Post } = require('../models/index.js');
 module.exports = (req, res, next) => {
     try {
         const token = req.headers.authorization.split(' ')[1]; // <- à préciser dans notre requête headers: {Authorization : type Bearer}
-        const decodedToken = jwt.verify(token, 'token_dev'); // <- notre TOKEN provisoire (à remplacer par process.env.TOKEN ensuite)
+        const decodedToken = jwt.verify(token, TOKEN_KEY); // <- notre TOKEN provisoire (à remplacer par process.env.TOKEN ensuite)
 
         /* Protégeons ce post en vérifiant si le userId du token correspond au userId du post sur lequel on souhaite accéder */
         Post.findOne({where: {id: req.params.id}})

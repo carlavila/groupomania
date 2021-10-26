@@ -2,7 +2,7 @@
     <div id="createPost">
         <form @submit.prevent="createPost">
             <div id="text">
-                <textarea name="textarea" placeholder="Publiez votre message" v-model="text"></textarea>
+                <textarea name="text" placeholder="Publiez votre message" v-model="text"></textarea>
             </div>
             <div id="preview" v-if="preview">
                 <img :src="preview" :alt="preview">

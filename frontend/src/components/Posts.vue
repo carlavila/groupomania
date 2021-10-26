@@ -16,7 +16,7 @@
                     </div>
                 </div>                               
             </div>
-            <p class="text">{{ post.text }}</p>
+            <p class="text">{{ post.content }}</p>
             <div v-if="post.file" class="fileContainer">          
                 <img :src="'http://localhost:3000/images/' + post.file" :alt="post.file" class="file">
             </div>

@@ -1,12 +1,14 @@
 <template>
     <!-- pour créer un nouveau commentaire -->
+    
+<div>
     <form @submit.prevent="createComment" v-show="!editComment">
         <input name="comment" placeholder="Publiez un commentaire" v-model="newComment" class="text">                           
-        <input type="submit" value="Je commente!" class="btn">
+        <input type="submit" value="Je commente" class="btn">
     </form>
     <p>{{errMsg}}</p>
     <!-- pour montrer la section commentaire (s'il y en a) -->
-    <div id="commentsContainer" v-show="comments.length > 0 ">
+    <div id="commentsContainer" v-show="comments.length> 0 ">
         <div :key="comment.id" v-for="comment in comments" class="comment">
             <div class="header">
                 <div class="profileContainer">
@@ -29,6 +31,7 @@
             </form>                          
         </div>        
     </div>
+</div>
 </template>
 
 <script>
