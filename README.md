@@ -49,3 +49,10 @@ nodemon server
 ```
 
 
+
+## Description du projet:
+
+- Ce projet simule le fonctionnement d'un réseau social d'entreprise appelé GROUPOMANIA
+- Le framework choisi pour le frontend est vue.js
+- Le backend tourne avec Node.js/Express.js et l'ORM Sequelize
+- la database est MySQL
