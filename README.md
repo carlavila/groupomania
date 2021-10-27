@@ -4,10 +4,10 @@
 - ORM: Sequelize (avec sequelize CLI)
 - Database: MySQL
 
-- FRONTEND:
-    cd vue-frontend
-    npm install
-    npm run serve
+#FRONTEND:
+- cd vue-frontend
+- npm install
+- npm run serve
 
 - BACKEND:
     cd backend
