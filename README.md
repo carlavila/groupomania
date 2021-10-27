@@ -19,25 +19,33 @@ npm install
 npm run serve
 ```
 
-BACKEND :
-- cd backend
-- npm install
-- npm i sequelize-cli
-- npx sequelize-cli db:create
-- nodemon server
-
-
-
 - Ouvrir un navigateur: http://localhost:8080
 ### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+BACKEND :
+
+```
+cd backend
+```
+
+```
+npm install
+```
+
+```
+npm install --save sequelize 
+```
+
+```
+npm install mysql --save
+```
+
+```
+nodemon server
+```
+
+
