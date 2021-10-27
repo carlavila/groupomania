@@ -20,7 +20,7 @@ npm run serve
 ```
 
 - Ouvrir un navigateur: http://localhost:8080
-### Compiles and minifies for production
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
