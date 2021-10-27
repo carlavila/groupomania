@@ -1,9 +1,10 @@
 # frontend
 
-## Project setup
-```
-npm install
-```
+## Prérequis:
+- Frontend: Vue.js
+- Backend: Node.js (avec Express.js)
+- ORM: Sequelize (avec sequelize CLI)
+- Database: MySQL
 
 ### Compiles and hot-reloads for development
 ```
