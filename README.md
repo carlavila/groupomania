@@ -4,17 +4,20 @@
 - ORM: Sequelize (avec sequelize CLI)
 - Database: MySQL
 
-#FRONTEND:
+
+FRONTEND :
 - cd vue-frontend
 - npm install
 - npm run serve
 
-- BACKEND:
-    cd backend
-    npm install
-    npm i sequelize-cli
-    npx sequelize-cli db:create
-    nodemon server
+BACKEND :
+- cd backend
+- npm install
+- npm i sequelize-cli
+- npx sequelize-cli db:create
+- nodemon server
+
+
 
 - Ouvrir un navigateur: http://localhost:8080
 ### Compiles and minifies for production
