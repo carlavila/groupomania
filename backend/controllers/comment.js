@@ -18,8 +18,8 @@ exports.getAllComments = (req, res) => {
 /* logique pour créer un commentaire */
 exports.createComment = (req, res) => {
 	try {
-	    let { text, userId, postId } = req.body;
-	    Comment.create({text, postId, userId})
+	    let { content, userId, postId } = req.body;
+	    Comment.create({content, postId, userId})
 		.then(newComment => {
 		    console.log("nouveau commentaire créé");
 		    res.status(201).json(newComment);

@@ -8,14 +8,16 @@ const fs = require('fs');
     /* logique pour créer un post */
 exports.createPost = (req, res) => {
 	if (req.file) {
-	    req.body.file = req.file.filename;
+	    imageUrl = req.file.filename;
+	    console.log("image ok");
 	} else {
-	    req.body.file = null;
+	    imageUrl = null;
+	    console.log("image not ok");
 	};
 	try {
 	    console.log(req.body);
 	    let { text, file, userId } = req.body;
-	    Post.create({content:text, file, userId})
+	    Post.create({content:text, imageUrl, userId})
 		.then(newPost => {
 		    console.log("nouveau post créé");
 		    res.status(201).json(newPost);
