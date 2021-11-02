@@ -4,7 +4,6 @@ const router = express.Router();
 //MIDDLEWARE
 const auth = require('../middleware/auth.js');
 
-
 //CONTROLLERS
 const commentCtrl = require('../controllers/comment.js')
 
@@ -22,4 +21,5 @@ router.put('/:id', auth, commentCtrl.editComment);
 /* route suppression commentaire */
 router.delete('/:id', auth, commentCtrl.deleteComment);
 
+//EXECUTION
 module.exports = router

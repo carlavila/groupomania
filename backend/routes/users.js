@@ -8,8 +8,6 @@ const userCtrl = require("../controllers/user.js");
 const auth = require('../middleware/userAuth.js');
 const multer = require('../middleware/multer-config.js');
 
-
-
 // ROUTES
 /* route création user */
 router.post('/signup', userCtrl.signup);
@@ -23,8 +21,6 @@ router.get('/all', auth, userCtrl.getAllUsers);
 router.get('/:id', auth, userCtrl.getOneUser);
 /* route suppression user */
 router.delete('/:id', auth, userCtrl.deleteUser);
-
-
 
 // EXECUTION
 module.exports = router;

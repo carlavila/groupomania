@@ -27,6 +27,5 @@ router.get('/:postId/likes', likesCtrl.getAllLikesPost);
 /* route suppression post */
 router.delete('/:id', postAuth, postCtrl.deletePost);
 
-
 // Execution
 module.exports = router;   

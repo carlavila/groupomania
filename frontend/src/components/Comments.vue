@@ -23,10 +23,10 @@
                     <button @click="deleteComment(comment.id)"><i class="far fa-trash-alt delete"></i>supprimer</button>    
                 </div>               
             </div>                       
-            <p v-show="!editComment" class="commentText">{{comment.text}}</p>
+            <p v-show="!editComment" class="commentText">{{comment.content}}</p>
             <!-- pour modifier le commentaire -->
             <form v-if="editComment == comment.id" @submit.prevent="modifyComment(comment.id)">
-                <input name="updateComment" ref="modify" :value="comment.text" class="text">                           
+                <input name="updateComment" ref="modify" :value="comment.content" class="content">                           
                 <input type="submit" value="Je modifie!" class="btn">
             </form>                          
         </div>        
@@ -59,7 +59,7 @@ export default {
                 return
             }
             const data = {
-                text: this.newComment,
+                content: this.newComment,
                 userId: JSON.stringify(this.userId),
                 postId: JSON.stringify(this.postId)
             }

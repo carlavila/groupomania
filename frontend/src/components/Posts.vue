@@ -17,8 +17,8 @@
                 </div>                               
             </div>
             <p class="text">{{ post.content }}</p>
-            <div v-if="post.file" class="fileContainer">          
-                <img :src="'http://localhost:3000/images/' + post.file" :alt="post.file" class="file">
+            <div v-if="post.imageUrl" class="fileContainer">          
+                <img :src="'http://localhost:3000/images/' + post.imageUrl" :alt="post.imageUrl" class="file">
             </div>
             <div class="interaction">
                 <Likes :postId="post.id" :userId="userId" />

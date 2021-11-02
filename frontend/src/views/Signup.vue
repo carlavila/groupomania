@@ -1,5 +1,5 @@
 <template>
-<div id="signup-login">	
+<div>	
     <Nav redirection="/login" :logged="false"/>
     <div id="signupForm">
         <h3>Signup</h3>
