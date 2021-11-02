@@ -130,6 +130,7 @@ export default {
 }
 </script>
 
+
 <style scoped>
 #postsContainer {
     width: 80%;
