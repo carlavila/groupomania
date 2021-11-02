@@ -1,24 +1,58 @@
-# frontend
+## Prérequis:
+- Frontend: Vue.js
+- Backend: Node.js (avec Express.js)
+- ORM: Sequelize (avec sequelize CLI)
+- Database: MySQL
 
-## Project setup
+
+FRONTEND :
+
 ```
-npm install
+cd frontend
 ```
 
-### Compiles and hot-reloads for development
+```
+npm install -g @vue/cli
+```
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- Ouvrir un navigateur: http://localhost:8080
 
-### Lints and fixes files
-```
-npm run lint
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+BACKEND :
+
+```
+cd backend
+```
+
+```
+npm install
+```
+
+```
+npm install --save sequelize 
+```
+
+```
+npm install mysql --save
+```
+
+```
+nodemon server
+```
+
+
+
+## Description du projet:
+
+- Ce projet simule le fonctionnement d'un réseau social d'entreprise appelé GROUPOMANIA
+- Le framework choisi pour le frontend est VueJS 3.
+- Le backend tourne avec Node.js/Express.js et l'ORM Sequelize
+- la database est MySQL
