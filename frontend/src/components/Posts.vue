@@ -207,6 +207,7 @@ button {
 i {
     margin-right: 4px;
 }
+
 @media screen and (max-width: 992px) {
     #postsContainer {
         width: 100%;
