@@ -52,7 +52,7 @@ exports.login = (req, res) => {
 
 /* logique pour update un user */
 exports.editUser = (req, res) => {  
-	req.file ? req.body.profile = req.file.filename : console.log("on garde la même photo"); // <- on vérifie si l'user a uploadé une nouvelle photo
+	req.file ? imageUrl = req.file.filename : console.log("on garde la même photo"); // <- on vérifie si l'user a uploadé une nouvelle photo
 	console.log('photo :'+ req.file)
 	if (req.file) { // <- on supprime l'ancienne image de profil
 	    User.findOne({where: {id:req.params.id}})
