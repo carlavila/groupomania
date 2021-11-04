@@ -52,14 +52,14 @@ exports.login = (req, res) => {
 
 /* logique pour update un user */
 exports.editUser = (req, res) => {  
-	req.file ? imageUrl = req.file.filename : console.log("on garde la même photo"); // <- on vérifie si l'user a uploadé une nouvelle photo
+	req.file ? req.body.imageUrl = req.file.filename : console.log("on garde la même photo"); // <- on vérifie si l'user a uploadé une nouvelle photo
 	console.log('photo :'+ req.file)
 	if (req.file) { // <- on supprime l'ancienne image de profil
 	    User.findOne({where: {id:req.params.id}})
 		.then(user => {
-		    if(user.profile !== "defaultUserProfile.png") { // <- si sa photo de profile n'est pas celle par défaut on peut la supprimer
-			fs.unlink(`images/${user.profile}`, (error) => {
-			    if (error) throw err
+		    if(user.imageUrl !== null) { // <- si sa photo de profile n'est pas celle par défaut on peut la supprimer
+			fs.unlink(`images/${user.imageUrl}`, (error) => {
+			    if (error) throw error
 			})    
 		    } else {
 			console.log("ce fichier ne peut être effacé car c'est l'image par défaut")
