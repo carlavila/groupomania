@@ -10,7 +10,7 @@
                     Changer d'image de profil :
                 </div>
                 <div class="profileContainer">
-                    <img id="preview" :src="user.profile" :alt="user.profile" class="profile">   
+                    <img id="preview" :src="'http://localhost:3000/images/'+ user.imageUrl" :alt="user.imageUrl" class="profile">   
                 </div>                
             </label>
             <input type="file" ref="file" name="file" id="file" @change="selectFile">           
