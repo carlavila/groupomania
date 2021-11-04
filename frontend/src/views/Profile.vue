@@ -7,7 +7,7 @@
             <button @click.prevent="toggleProfile"><i class="fas fa-cog"></i>Modifier profil</button>                
         </div> 
         <div class="profileContainer">
-            <img :src="user.profile" :alt="user.profile" class="profile">   
+            <img :src="'http://localhost:3000/images/'+ user.imageUrl" :alt="user.imageUrl" class="profile">   
         </div>
         <button @click.prevent="toggleProfile"><i class="fas fa-camera"></i>Choisir une nouvelle image de profil</button>
         <div class="info">
