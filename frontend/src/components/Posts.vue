@@ -3,7 +3,7 @@
         <div :key="post.id" v-for="post in posts" class="post">
             <div class="header">
                 <div class="profileContainer">
-                    <img :src="'http://localhost:3000/images/' + post.User.profile" :alt="post.User.profile" class="profile">    
+                    <img :src="'http://localhost:3000/images/' + post.User.imageUrl" :alt="post.User.imageUrl" class="profile">    
                 </div>
                 <div class="description">
                     <div>
