@@ -22,26 +22,6 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Like',
   });
-  Like.afterCreate(async like => {
-    const post = await like.getPost()
-    await post.update({
-      likesCount: post.like + 1
-    })
-  })
-  Like.afterDestroy(async like => {
-    const post = await like.getPost()
-    post.update({
-      like: post.like - 1
-    })
-  })
-
-  Like.afterCreate(async like => {
-    const post = await like.getPost()
-    const user = await like.getUser()
-
-    if(user.id == publication.userId) return
-
-  })
   
   return Like;
 };
