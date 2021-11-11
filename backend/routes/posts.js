@@ -12,18 +12,26 @@ const multer = require('../middleware/multer-config.js');
 
 //ROUTES
 
+/* '/' = https://localhost:3000/api/posts */
+
 /* route création post */
 router.post('/create', auth, multer, postCtrl.createPost);
+
 /* route affichage ensemble des posts */
 router.get('/all', postCtrl.getAllPosts);
+
 /* route affichage d'un post en particulier */
 router.get('/:id', postCtrl.getOnePost);
+
 /* route modification post */
 router.put('/:id', postAuth, multer, postCtrl.editPost);
+
 /* route pour like un post */
 router.post('/:postId/like', likesCtrl.likePost);
+
 /* route pour récupérer les likes d'un post */
 router.get('/:postId/likes', likesCtrl.getAllLikesPost);
+
 /* route suppression post */
 router.delete('/:id', postAuth, postCtrl.deletePost);
 
