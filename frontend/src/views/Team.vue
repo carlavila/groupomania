@@ -10,7 +10,7 @@
         <div :key="user.id" v-for="user in filterUsers" class="user">
             <div id="header">
                 <div class="profileContainer">
-                    <img :src="'http://localhost:3000/images/' + user.profile" :alt="user.profile" class="profile">    
+                    <img :src="'http://localhost:3000/images/' + user.imageUrl" :alt="user.imageUrl" class="profile">    
                 </div>
                 <h4>{{user.firstname}} {{user.lastname}}</h4>   
             </div>             
