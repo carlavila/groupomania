@@ -41,8 +41,8 @@ exports.login = (req, res) => {
 			res.status(200).json({
 			    // la res de login renvoi des données de user et le token (qui servira pour l'authentification)
 			    userId: user.id,
-			    isAdmin: user.isAdmin, 
-			    token: jwt.sign({userId: user.id, isAdmin: user.isAdmin }, process.env.TOKEN_KEY, { expiresIn: '24h' })
+			    isAdmin: user.userId == 1, 
+			    token: jwt.sign({userId: user.id, isAdmin: user.id == 1 }, process.env.TOKEN_KEY, { expiresIn: '24h' })
 			});               
 		    })
 		    .catch(error => res.status(400).json(error));
