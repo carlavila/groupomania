@@ -21,7 +21,7 @@ export default {
     methods: {
         /* fetch des Likes en fonction de l'id du post concerné */      
         async fetchLikes(postId) {
-            const resLikes = await fetch(`http://localhost:3000/api/posts/${JSON.stringify(postId)}/like`)
+            const resLikes = await fetch(`http://localhost:3000/api/posts/${JSON.stringify(postId)}/likes`)
             const dataLikes = await resLikes.json()
             dataLikes.forEach(like => {
             like.userId == this.userId ? this.liked = true : this.like = false // <- ici on vérifie si notre user à déjà liker ce post
