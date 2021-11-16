@@ -54,7 +54,7 @@ const router = new VueRouter({
   routes
 })
 
-/* vérifions si l'user est connecté en appelant le state.user (depuis le store) sinon on redirige vers /login */
+/* On vérifie si l'user est connecté en appelant le state.user (depuis le store) sinon on redirige vers /login */
 router.beforeEach((to, from, next) => {
 	const isLogged = store.state.isLogged
 	if ((to.name !== 'Login' && !isLogged) && (to.name !== 'Signup' && !isLogged)) next({ name: 'Login' })
