@@ -59,6 +59,7 @@ export default {
     },
     async created() {
         this.posts = await this.fetchPosts()
+        this.isAdmin = Boolean(localStorage.getItem('isAdmin'))
         this.userId = Number(localStorage.getItem('userId'))
     },
     computed: {

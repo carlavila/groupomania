@@ -59,7 +59,7 @@ export default {
                         /* on récupère dans localStorage les valeurs générés par le token */
                         localStorage.setItem('token', data.token)
                         localStorage.setItem('userId', data.userId)
-                        localStorage.setItem('isAdmin', data.isAdmin)
+                        localStorage.setItem('isAdmin', data.userId == 1)
                     })
                     /* si la réponse est 200 alors on entre */
                     if (res.status === 200 ) {
