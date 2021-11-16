@@ -45,6 +45,14 @@ npm install mysql --save
 ```
 
 ```
+sequelize init
+```
+
+```
+sequelize model:create --attributes
+```
+
+```
 nodemon server
 ```
 
