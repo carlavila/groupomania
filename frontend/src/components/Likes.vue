@@ -1,6 +1,5 @@
 <template>
     <button v-if="!liked" @click="likePost(postId)" class="btn">
-        <i class="far fa-thumbs-up likeBtn like"></i>
         {{like.length}}
     </button>
 </template>
