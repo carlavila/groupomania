@@ -22,7 +22,7 @@
             </div>
             <div class="interaction">
                 <Likes :postId="post.id" :userId="userId" />
-                |
+                
                 <button @click="toggleComments(post.id)" class="btn comments"><i class="far fa-comment"></i>Commentaires</button>
             </div>
             <Comments v-if="showComments == post.id" :comments="comments" :isAdmin="isAdmin" :userId="userId" :postId="post.id" 
@@ -60,9 +60,11 @@ export default {
         /* détermine le statut de l'user connecté par rapport à ce post */
         auth(postUserId) {
             if (this.isAdmin) {
+                console.log ("je suis admin")
                 return true
             }
             if (this.userId !== postUserId) {
+                console.log ("id différent")
                 return false
             }
             return true          
