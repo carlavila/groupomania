@@ -2,6 +2,8 @@
     <button v-if="!liked" @click="likePost(postId)" class="btn">
         {{like.length}}
     </button>
+
+    <div v-else-if="liked">{{like.length}}</div>
 </template>
 
 <script>
