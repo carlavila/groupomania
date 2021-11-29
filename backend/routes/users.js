@@ -22,7 +22,7 @@ router.post('/login', userCtrl.login);
 router.put('/:id', auth, multer, userCtrl.editUser);
 
 /* route affichage ensemble des users */
-router.get('/all', auth, userCtrl.getAllUsers);
+router.get('/all', userCtrl.getAllUsers);
 
 /* route affichage user connecté */
 router.get('/:id', auth, userCtrl.getOneUser);
