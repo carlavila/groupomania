@@ -87,8 +87,8 @@ exports.editUser = (req, res) => {
     
     /* logique pour afficher tous les users */
 exports.getAllUsers = (req, res) => {
-	try {
-	    User.findAll({ include: { model: Post, include: { model: Like } }})
+	try {	
+		User.findAll({ include: { model: Post, include: { model: Like } }})
 		.then(users => {
 		    res.status(200).json(users);
 		})
