@@ -43,12 +43,18 @@ export default {
     methods: {
         /* on récupère les users */
         async fetchUsers() {
-            const res = await fetch('http://localhost:3000/api/users/all')
+        const res = await fetch('http://localhost:3000/api/users/all',{
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
             const data = await res.json()
+            
             data.forEach(user => {
                 user.username = user.firstname + " " + user.lastname
             })
             return data
+        
         },
         /* le compteur des likes reçus par l'user */
         getLikes(userPosts) {
@@ -67,10 +73,13 @@ export default {
             }
             
         }
+    
     },
     async created() {
         this.users = await this.fetchUsers()
+    
     },
+
     computed: {
         filterUsers: function() {
             return this.users.filter((user) => {
