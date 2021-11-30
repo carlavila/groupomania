@@ -2,11 +2,11 @@
 <div id="signup-login">
     <Nav redirection="/login" :logged="false"/>
     <div id="loginForm">
-        <h3>Login</h3>
+        <h3>Se connecter</h3>
         <form @submit.prevent="onSubmit">
             <input type="email" name="email" placeholder="Email" v-model="dataForm.email">
             <input type="password" name="password" placeholder="Mot de passe" v-model="dataForm.password">
-            <input type="submit" value="Login" class="btn">
+            <input type="submit" value="Je me connecte" class="btn">
         </form>
         <h4>{{ errMsg }}</h4>
         <p>Je n'ai pas créé de compte ? Cliquez ici: <router-link to="/signup">S'inscrire</router-link></p>
