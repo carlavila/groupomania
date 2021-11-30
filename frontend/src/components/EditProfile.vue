@@ -27,7 +27,7 @@
 
             <button @click.prevent="deleteProfile" class="delete">Supprimer le compte</button> 
 
-            <input type="submit" value="modifier" class="btn" @click.prevent="modifyProfile">
+            <input type="submit" value="Modifier" class="btn" @click.prevent="modifyProfile">
         </form>
         <h4>{{ errMsg }}</h4>
     </div>
@@ -188,13 +188,19 @@ button {
     font-size: 0.94rem;
 }
 .btn {
-    margin-top: 1rem;
-    color: white;
-    background: #1c69e6e7;
+    margin: 10px;
+    background: rgb(221, 177, 177);
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-decoration: none;
 }
-.btn:hover {
-    box-shadow: 2px 2px 8px 5px #1c69e665;
-    background: #1c68e6;
+.btn:hover{
+    box-shadow: 2px 2px 8px 5px  rgb(223, 184, 184);
 }
 .btn:active {
     transform: scale(0.98);
