@@ -11,8 +11,8 @@
                         <p>posté le {{ post.createdAt }}</p>
                     </div>                 
                     <div v-if="auth(post.userId)" class="optionsBtn">
-                        <button @click="modifyPost(post.id)"><i class="far fa-edit modify"></i>modifier</button>
-                        <button @click="deletePost(post.id)"><i class="far fa-trash-alt delete"></i>supprimer</button>    
+                        <button @click="modifyPost(post.id)" class="btn">Modifier</button>
+                        <button @click="deletePost(post.id)" class="btn">Supprimer</button>    
                     </div>
                 </div>                               
             </div>
@@ -22,8 +22,8 @@
             </div>
             <div class="interaction">
                 <Likes :postId="post.id" :userId="userId" />
-                
-                <button @click="toggleComments(post.id)" class="btn comments"><i class="far fa-comment"></i>Commentaires</button>
+            
+                <button @click="toggleComments(post.id)" class="btn comments">Commentaires</button>
             </div>
             <Comments v-if="showComments == post.id" :comments="comments" :isAdmin="isAdmin" :userId="userId" :postId="post.id" 
                 @created="addComment" @deleted="deleteComment" @modified="modifyComment"/>             
@@ -178,6 +178,7 @@ export default {
     margin: 0 0.2rem 0 1rem;
 }
 .text {
+    font-size: 18px;
     margin: 1.4rem 0 1.4rem 0;
 }
 .fileContainer {
@@ -193,6 +194,19 @@ button {
     background: none;
     border-style: none;
     outline: none;   
+}
+.btn {
+    display: block;
+    text-align: center;
+    background: rgb(221, 177, 177);
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-decoration: none;
 }
 .interaction {
     border-top: 1px solid rgb(0 0 0 / 10%);
