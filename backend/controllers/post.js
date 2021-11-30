@@ -58,32 +58,31 @@ exports.getOnePost = (req, res) => {
 
 /* logique pour modifier un post */
 exports.editPost = (req, res) => {
-	req.file ? req.body.file = req.file.filename : console.log("on garde la même photo"); // <- on vérifie si l'user a uploadé une nouvelle photo
-	if (req.file) { // <- on supprime l'ancienne image du post
-	    Post.findOne({where: {id:req.params.id}})
-		.then(post => {
-		    if(post.file) { // <- si post.file n'est pas null on supprime le fichier existant
-			fs.unlink(`images/${post.file}`, (error) => {
-			    if (error) throw err
-			})    
-		    } else {
-			console.log("l'image à remplacer est NULL")
-		    }
-		})
-		.catch(error => res.status(400).json(error));
-	}
-	try {
-	    Post.update(req.body, {where: {id: req.params.id}})
-		.then(() => {
-		    let updatedPost = {...req.body}
-		    res.status(201).json(updatedPost)
-		})
-		.catch(error => res.status(400).json(error))
-	} catch {
-	    error => res.status(500).json(error);
-	}
+        req.file ? req.body.imageUrl = req.file.filename : console.log("on garde la même photo"); // <- on vérifie si l'user a uploadé une nouvelle photo
+        if (req.file) { // <- on supprime l'ancienne image du post
+            Post.findOne({where: {id:req.params.id}})
+                .then(post => {
+                    if(post.file) { // <- si post.file n'est pas null on supprime le fichier existant
+                        fs.unlink(`images/${post.file}`, (error) => {
+                            if (error) throw err
+                        })    
+                    } else {
+                        console.log("l'image à remplacer est NULL")
+                    }
+                })
+                .catch(error => res.status(400).json(error));
+        }
+        try {
+            Post.update(req.body, {where: {id: req.params.id}})
+                .then(() => {
+                    let updatedPost = {...req.body}
+                    res.status(201).json(updatedPost)
+                })
+                .catch(error => res.status(400).json(error))
+        } catch {
+            error => res.status(500).json(error);
+        }
 };
-    
 
 
 /* logique pour supprimer un post */
