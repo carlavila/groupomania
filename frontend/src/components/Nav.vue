@@ -9,14 +9,14 @@
         </div>
         <!-- l'user n'est pas connecté -> signup/login -->
         <div id="routes" v-if="!logged">
-            <router-link to="/signup" class="link">Sign up</router-link>
-            <router-link to="/login" class="link">Login</router-link>    
+            <router-link to="/signup" class="link">Inscription</router-link>
+            <router-link to="/login" class="link">Connexion</router-link>    
         </div>  
         <!-- l'user est connecté et dans ce cas -> team/profile/logout -->
         <div id="options" v-else>
-            <router-link to="/team" class="link"><i class="fas fa-users"></i>Membres</router-link>
-            <router-link to="/profile" class="link"><i class="fas fa-user"></i>Profil</router-link>
-            <router-link to="/" @click="logout" class="link"><i class="fas fa-sign-out-alt"></i>Déconnexion</router-link>
+            <router-link to="/team" class="link">Membres</router-link>
+            <router-link to="/profile" class="link">Profil</router-link>
+            <router-link to="/" @click="logout" class="link">Déconnexion</router-link>
         </div>    
     </div>
 </template>
