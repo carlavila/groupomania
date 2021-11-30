@@ -9,7 +9,7 @@
             <input type="submit" value="Login" class="btn">
         </form>
         <h4>{{ errMsg }}</h4>
-        <p>Je n'ai pas créé de compte ? Cliquez ici: <router-link to="/signup">S'inscrire'</router-link></p>
+        <p>Je n'ai pas créé de compte ? Cliquez ici: <router-link to="/signup">S'inscrire</router-link></p>
     </div>
 </div>
 </template>
