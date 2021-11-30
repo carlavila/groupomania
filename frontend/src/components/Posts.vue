@@ -113,7 +113,7 @@ export default {
         async modifyComment(commentId, newText) {
             this.comments.forEach(comment => {
                 if(comment.id == commentId) {
-                    comment.text = newText
+                    comment.content = newText
                 }
             }) 
         },            
