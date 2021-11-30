@@ -25,7 +25,7 @@
             <label for="password">Changer de mot de passe :</label>
             <input type="password" name="password" placeholder="entrez un nouveau mot de passe" v-model="updateUser.password">
 
-            <button @click.prevent="deleteProfile" class="delete"><i class="far fa-trash-alt delete"></i>Supprimer compte</button> 
+            <button @click.prevent="deleteProfile" class="delete">Supprimer le compte</button> 
 
             <input type="submit" value="modifier" class="btn" @click.prevent="modifyProfile">
         </form>
