@@ -4,7 +4,6 @@
     <Header :home="false" header="Membres" />
     <div id="usersContainer">
         <div id="query">
-            <span><i class="fas fa-search"></i></span>
             <input type="text" placeholder="exemple: John Doe" v-model="search">
         </div>           
         <div :key="user.id" v-for="user in filterUsers" class="user">
