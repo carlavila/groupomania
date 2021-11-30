@@ -107,13 +107,17 @@ img {
     padding-top: 2rem;
 }
 .btn {
-    background-color: #1c68e6;
-    border-style: none;
+    background: rgb(221, 177, 177);
+    border-radius: 5px;
+    padding: 6px 10px;
+    cursor: pointer;
+    border: none;
     outline: none;
-    width: 20%;
-    border-radius: 8px;
-    height: 40px;
-    color: white;
+    color: #ffffff;
+    text-decoration: none;
+}
+.btn:hover{
+    box-shadow: 2px 2px 8px 5px  rgb(223, 184, 184);
 }
 .upload:active {
   transform: scale(0.98);
