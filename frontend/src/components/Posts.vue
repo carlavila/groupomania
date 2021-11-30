@@ -196,8 +196,8 @@ button {
     outline: none;   
 }
 .btn {
-    display: block;
     text-align: center;
+    margin: 10px;
     background: rgb(221, 177, 177);
     border-radius: 5px;
     padding: 6px 10px;
@@ -207,6 +207,9 @@ button {
     outline: none;
     color: #ffffff;
     text-decoration: none;
+}
+.btn:hover{
+    box-shadow: 2px 2px 8px 5px  rgb(223, 184, 184);
 }
 .interaction {
     border-top: 1px solid rgb(0 0 0 / 10%);
