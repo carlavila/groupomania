@@ -11,7 +11,7 @@
             </div>
             <div id="text">
                 <label for="textarea">Changer votre texte</label>
-                <textarea name="textarea" v-model="post.text"></textarea>
+                <textarea name="textarea" v-model="post.content"></textarea>
             </div>
             <div id="modify">
                 <input type="submit" value="Je modifie" class="btn">    
@@ -67,13 +67,13 @@ export default {
         },
         async modifyPost() {
             /* on peut envoyer un post sans image mais il faut au moins qu'il y est un texte */     
-            if (!this.post.text) {
+            if (!this.post.content) {
                 this.errMsg = "Error => vous devez remplir le champ <message> pour créer une nouvelle publication!"
                 return
             }
             /* on créé un objet formData afin de pouvoir ajouter le texte et surtout le file choisi */
             let formData = new FormData()
-            formData.append('text', this.post.text)
+            formData.append('content', this.post.content)
             if (this.newFile) {
                 formData.append('file', this.newFile)
             }
