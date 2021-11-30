@@ -1,9 +1,6 @@
 <template>
-    <button v-if="!liked" @click="likePost(postId)" class="btn">
-        {{like.length}}
-    </button>
-
-    <div v-else-if="liked">{{like.length}}</div>
+    <button v-if="!liked" @click="likePost(postId)" class="btn-secondary like-review">Like</button>
+    <button v-else-if="liked" class="btn-secondary like-review">{{like.length}}</button>
 </template>
 
 <script>
@@ -57,30 +54,21 @@ export default {
 </script>
 
 <style scoped>
-button {
-    background: none;
-    border-style: none;
+.btn-secondary {
+    display: block;
+    text-align: center;
+    background: blue;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
     outline: none;
-    width: 40%
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
-p {
-    margin: 1rem 0 1rem 0;
-}
-.liked {
-    color: white;
-    background-color: #3174e4;
-    border: 1px solid #3174e4;
-    border-radius: 50%;
-    padding: 0.5rem;
-}
-.like {
-    color: #3174e4;
-    background-color: white;
-    border: 1px solid #3174e4;
-    border-radius: 50%;
-    padding: 0.5rem;
-}
-i {
-    margin-right: 4px;
-}
+
+
 </style>
