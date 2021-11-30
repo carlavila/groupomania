@@ -2,12 +2,11 @@
 <div class="home">
     <Nav redirection="/home" :logged="true" />
     <Header :home="true" header="Accueil" />
-    <button v-if="createPost" @click="toggleCreate" class="btn">Retour au posts</button>
-    <button v-else @click="toggleCreate" class="btn">Créer un nouveau message</button>    
+    <button v-if="createPost" @click="toggleCreate" class="btn">Retour aux posts</button>
+    <button v-else @click="toggleCreate" class="btn">Publier un nouveau post</button>    
     <CreatePost v-show="createPost" @toggle-Create="toggleCreate" @add-Post="addPostFrontend" />
     <div v-if="!createPost" id="query">
-        <span><i class="fas fa-search"></i></span>
-        <input type="text" placeholder="exemple: John Doe" v-model="search">
+        <input type="text" placeholder="exemple : John Doe" v-model="search">
     </div>       
     <Posts :posts="filterPosts" @delete-Post="deletePostFrontend" :isAdmin="isAdmin" :userId="userId" />
 </div>
@@ -74,16 +73,20 @@ export default {
 </script>
 <style scoped>
 .btn {
-    display: inline-block;
-    color: white;
-    background: #1c68e6;
-    border: none;
-    padding: 10px 20px;
+    display: block;
+    margin : auto;
+    background: rgb(221, 177, 177);
     border-radius: 5px;
+    padding: 16px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
     text-decoration: none;
 }
 .btn:hover {
-    box-shadow: 2px 2px 8px 5px #1c69e665;
+    box-shadow: 2px 2px 8px 5px  rgb(223, 184, 184);
 }
 .btn:active {
     transform: scale(0.98);
@@ -96,26 +99,15 @@ export default {
     margin: 1rem 0 0 0;
 }
 input {
-    padding: 6px;
-    border: 1px solid #1c68e6;
-    border-radius: 0 4px 4px 0;
-    border-left-style: none;
+    display: block;
+    margin: auto;
+    font-size: 15px;
+    padding: 6px ;
+    border: 1px solid rgb(223, 184, 184);
+    border-radius: 5px;
 }
 input:focus {
     outline: none;
 }
-span {
-    padding: 6px;
-    border: 1px solid #1c68e6;
-    border-right-style: none;
-    border-radius: 4px 0 0 4px;
-}
-@media screen and (max-width: 992px) {
-    #query {
-        margin-left: 2rem;
-    }
-    .btn {
-        margin-left: 2rem;
-    }
-}
+
 </style>
