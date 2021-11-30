@@ -55,8 +55,8 @@ export default {
 
 <style scoped>
 .btn-secondary {
-    display: block;
     text-align: center;
+    margin: 5px;
     background: rgb(221, 177, 177);
     border-radius: 5px;
     padding: 6px 10px;
@@ -66,6 +66,9 @@ export default {
     outline: none;
     color: #ffffff;
     text-decoration: none;
+}
+.btn-secondary:hover {
+    box-shadow: 2px 2px 8px 5px  rgb(223, 184, 184);
 }
 
 
