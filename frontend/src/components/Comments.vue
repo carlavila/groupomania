@@ -12,15 +12,15 @@
         <div :key="comment.id" v-for="comment in comments" class="comment">
             <div class="header">
                 <div class="profileContainer">
-                        <img :src="'http://localhost:3000/images/' + comment.User.profile" :alt="comment.User.profile" class="profile">>    
+                        <img :src="'http://localhost:3000/images/' + comment.User.imageUrl" :alt="comment.User.imageUrl" class="profile">>    
                 </div>
                 <div class="commentUsername">
                     <h5>{{comment.User.firstname}} {{comment.User.lastname}}</h5>     
                 </div>
                 <div v-if="auth(comment.User.id)" class="optionsBtn">
-                    <button v-if="editComment != comment.id" @click="toggleComment(comment.id)"><i class="far fa-edit modify"></i>modifier</button>
-                    <button v-if="editComment == comment.id" @click="toggleComment(comment.id)"><i class="fas fa-arrow-left"></i>annuler</button>
-                    <button @click="deleteComment(comment.id)"><i class="far fa-trash-alt delete"></i>supprimer</button>    
+                    <button v-if="editComment != comment.id" @click="toggleComment(comment.id)">Modifier</button>
+                    <button v-if="editComment == comment.id" @click="toggleComment(comment.id)">Annuler</button>
+                    <button @click="deleteComment(comment.id)">Supprimer</button>    
                 </div>               
             </div>                       
             <p v-show="!editComment" class="commentText">{{comment.content}}</p>
