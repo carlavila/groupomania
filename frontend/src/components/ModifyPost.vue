@@ -1,12 +1,12 @@
 <template>
     <div id="modifyPost">
         <form @submit.prevent="modifyPost">
-            <div id="btns">
+             <div id="btns">
                 <label for="file">Choisir une nouvelle image</label>
                 <input type="file" ref="file" name="file" class="upload" id="file" @change="updateFile">
             </div>
             <div id="fileContainer">
-                <img id="preview" :src="'http://localhost:3000/images/' + post.file" :alt="post.file" v-if="preview">
+                <img id="preview" :src="'http://localhost:3000/images/' + post.imageUrl" :alt="post.imageUrl" v-if="preview">
                 <p v-else>Ce post ne possède pas d'image</p>
             </div>
             <div id="text">
