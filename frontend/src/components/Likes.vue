@@ -57,7 +57,7 @@ export default {
 .btn-secondary {
     display: block;
     text-align: center;
-    background: blue;
+    background: rgb(221, 177, 177);
     border-radius: 5px;
     padding: 6px 10px;
     font-size: 15px;
