@@ -27,7 +27,7 @@
             <!-- pour modifier le commentaire -->
             <form v-if="editComment == comment.id" @submit.prevent="modifyComment(comment.id)">
                 <input name="updateComment" ref="modify" :value="comment.content" class="content">                           
-                <input type="submit" value="Je modifie!" class="btn">
+                <input type="submit" value="Je modifie" class="btn">
             </form>                          
         </div>        
     </div>
@@ -113,7 +113,7 @@ export default {
         /* pour modifier le commentaire */ 
         modifyComment(commentId) {        
             const data = {
-                text: this.$refs.modify.value
+                content: this.$refs.modify.value
             }
             fetch(`http://localhost:3000/api/comments/${JSON.stringify(commentId)}`, {
                 method: 'PUT',
@@ -124,7 +124,7 @@ export default {
                 body: JSON.stringify(data) 
             })
                 .catch(error => console.log(error))
-            this.$emit('modified', commentId, data.text)
+            this.$emit('modified', commentId, data.content)
             this.toggleComment(commentId)
         }
     },
