@@ -6,7 +6,7 @@
         <form @submit.prevent="onSubmit">
             <input type="email" name="email" placeholder="Email" v-model="dataForm.email">
             <input type="password" name="password" placeholder="Mot de passe" v-model="dataForm.password">
-            <input type="submit" value="Login !" class="btn">
+            <input type="submit" value="Login" class="btn">
         </form>
         <h4>{{ errMsg }}</h4>
         <p>Je n'ai pas créé de compte ? Cliquez ici: <router-link to="/signup">Signup</router-link></p>
@@ -107,10 +107,21 @@ input {
 input:hover {
     box-shadow: 2px 2px 8px 5px rgb(0 0 0 / 18%);
 }
+
 .btn {
-    color: white;
-    background-color: rgba(0, 128, 0, 0.836);
-    margin: 2rem;
+    margin: 10px;   
+    background: rgb(221, 177, 177);
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-decoration: none;
+}
+.btn:hover{
+    box-shadow: 2px 2px 8px 5px  rgb(223, 184, 184);
 }
 @media screen and (max-width: 992px) {
     form {
