@@ -2,16 +2,16 @@
 <div>	
     <Nav redirection="/login" :logged="false"/>
     <div id="signupForm">
-        <h3>Signup</h3>
+        <h3>S'inscrire</h3>
         <form @submit.prevent="onSubmit">
             <input type="text" name="firstname" placeholder="Prénom" v-model="dataForm.firstname">
             <input type="text" name="lastname" placeholder="Nom" v-model="dataForm.lastname">
             <input type="email" name="email" placeholder="Email" v-model="dataForm.email">
             <input type="password" name="password" placeholder="Mot de passe" v-model="dataForm.password">
-            <input type="submit" value="Je m'inscris !" class="btn">
+            <input type="submit" value="Je m'inscris" class="btn">
         </form>
         <h4>{{ errMsg }}</h4>
-        <p>Je possède déjà un compte ? Cliquez ici: <router-link to="/login">Login</router-link></p>
+        <p>Je possède déjà un compte ? Cliquez ici: <router-link to="/login">Se connecter</router-link></p>
     </div>
 </div>
 </template>
@@ -149,10 +149,21 @@ input:hover {
     box-shadow: 2px 2px 8px 5px rgb(0 0 0 / 18%);
 }
 .btn {
-    color: white;
-    background-color: rgba(0, 128, 0, 0.836);
-    margin: 2rem;
+    margin: 10px;   
+    background: rgb(221, 177, 177);
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-decoration: none;
 }
+.btn:hover{
+    box-shadow: 2px 2px 8px 5px  rgb(223, 184, 184);
+}
+
 @media screen and (max-width: 992px) {
     form {
         width: 100%;
