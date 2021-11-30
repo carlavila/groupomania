@@ -14,7 +14,7 @@
                 <textarea name="textarea" v-model="post.text"></textarea>
             </div>
             <div id="modify">
-                <input type="submit" value="je modifie !" class="btn">    
+                <input type="submit" value="Je modifie" class="btn">    
             </div>
             <p>{{errMsg}}</p>
         </form>
@@ -142,15 +142,21 @@ textarea {
     text-align: right;
 }
 .btn {
-    background-color: #1c68e6;
-    border-style: none;
+    margin: 10px;
+    background: rgb(221, 177, 177);
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
     outline: none;
-    width: 20%;
-    border-radius: 8px;
-    height: 40px;
-    color: white;
-    margin: 1rem 0 1rem 0;
+    color: #ffffff;
+    text-decoration: none;
 }
+.btn:hover{
+    box-shadow: 2px 2px 8px 5px  rgb(223, 184, 184);
+}
+
 @media screen and (max-width: 992px) {
     #modifyPost {
         max-width: 90%;
