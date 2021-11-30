@@ -179,7 +179,7 @@ export default {
 }
 .text {
     font-size: 18px;
-    margin: 1.4rem 0 1.4rem 0;
+    margin: 3.5rem 0 2rem 0;
 }
 .fileContainer {
     overflow: hidden;
