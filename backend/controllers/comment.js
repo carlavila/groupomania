@@ -62,12 +62,13 @@ exports.deleteComment = (req, res) => {
 exports.editComment = (req, res) => {
 	console.log(req.body)
 	try {
-	    Comment.update(req.body, {where: {id: req.params.id}})
+	    Comment.update(req.body.content, {where: {id: req.params.id}})
 		.then(() => {
-		    let updatedComment = {...req.body}
+		    let updatedComment = {...req.body.content}
 		    res.status(201).json(updatedComment)
 		})
 		.catch(error => res.status(400).json(error))
+		
 	} catch {
 	    error => res.status(500).json(error);
 	}
