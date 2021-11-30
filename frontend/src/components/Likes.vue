@@ -1,6 +1,6 @@
 <template>
-    <button v-if="!liked" @click="likePost(postId)" class="btn-secondary like-review">Like</button>
-    <button v-else-if="liked" class="btn-secondary like-review">{{like.length}}</button>
+    <button v-if="!liked" @click="likePost(postId)" class="btn-secondary like-review">Aimer</button>
+    <button v-else-if="liked" class="btn-secondary like-review">{{like.length}} J'aime</button>
 </template>
 
 <script>
@@ -66,8 +66,6 @@ export default {
     outline: none;
     color: #ffffff;
     text-decoration: none;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
 }
 
 
