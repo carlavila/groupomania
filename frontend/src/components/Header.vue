@@ -2,7 +2,7 @@
     <header>
         <!--  si on ne se trouve pas sur la page 'home' (accueil) alors on peut y revenir via la flèche "retour" -->
         <div v-if="!home" id="back">
-            <router-link to="/home" class="back"><i class="fas fa-arrow-left"></i>accueil</router-link>
+            <router-link to="/home" class="back">Accueil</router-link>
         </div>      
         <div id="text">
             <img src="../assets/logos/icon-left-font-monochrome-black.svg" alt="GROUPOMANIA">
